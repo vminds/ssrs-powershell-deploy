@@ -8,7 +8,7 @@
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
     <Name>ssrs-powershell-deploy</Name>
-    <DebugArguments>-path 'Example-Reports\Example-Reports.rptproj' -configuration Release -verbose -debug</DebugArguments>
+    <DebugArguments>-Solution 'D:\Projects\SSRS\MyReports.sln' -Configuration 'Release' -ReportServerURI 'http://localhost/reportserver_sql2016' -LogPath 'D:\Projects\SSRS\log' -RsRoot '/First/Second' -DataSourceUser 'ReadUser' -DataSourcePWD 'ReadPWD'</DebugArguments>
     <Author>Multiple contributors</Author>
     <CompanyName />
     <Copyright />
