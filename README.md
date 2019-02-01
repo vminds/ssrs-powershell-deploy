@@ -1,6 +1,6 @@
 # SSRS Powershell Deploy
 
-* https://github.com/vminds/SSRSdeploy
+* https://github.com/vminds/ssrs-powershell-deploy
 
 PowerShell module to publish SQL Server Reporting Services solution(s) and project(s)
 to a Microsoft SSRS Reporting Server
