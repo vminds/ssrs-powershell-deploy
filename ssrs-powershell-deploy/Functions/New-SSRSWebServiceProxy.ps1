@@ -27,6 +27,7 @@
 			$_.GetType('SSRS.ReportingService2010.ReportingService2010')
 		}
 	if (($Assembly | Measure-Object).Count -gt 1) {
+		Write-ErrorLog -Message 'AppDomain contains multiple definitions of the same type. Restart PowerShell host.'
 		throw 'AppDomain contains multiple definitions of the same type. Restart PowerShell host.'
 	}
 

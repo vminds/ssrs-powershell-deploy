@@ -17,7 +17,7 @@
 	$script:ErrorActionPreference = 'Stop'
 	Set-StrictMode -Version Latest
 
-	Write-Verbose "Reading '$Configuration' config from '$Path'"
+	Write-InformationLog -Message "Reading '$Configuration' config from '$Path'"
 
 	[xml]$Project = Get-Content -Path $Path
 
@@ -36,6 +36,7 @@
 	#	Where-Object { $_.FullPath -eq $Configuration } |
 	#	Select-Object -First 1
 	if (-not $Config) {
+		Write-ErrorLog -Message "Could not find configuration '$Configuration'."
 		throw "Could not find configuration '$Configuration'."
 	}
 

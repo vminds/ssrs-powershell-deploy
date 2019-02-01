@@ -8,7 +8,7 @@ function New-SSRSDataSet (
 {
 
 	$script:ErrorActionPreference = 'Stop'
-	Write-Verbose "Processing DataSet '$RsdPath'..."
+	Write-InformationLog -Message "Processing DataSet '$RsdPath'..."
 
 	$Folder = Normalize-SSRSFolder -Folder $Folder
 
@@ -33,13 +33,13 @@ function New-SSRSDataSet (
 	$write = $false
 	if ($exists) {
 		if ($Overwrite) {
-			Write-Verbose " - overwriting"
+			Write-InformationLog -Message " - overwriting"
 			$write = $true
 		} else {
-			Write-Verbose " - skipped, already exists"
+			Write-InformationLog -Message " - skipped, already exists"
 		}
 	} else {
-		Write-Verbose " - creating new"
+		Write-InformationLog -Message " - creating new"
 		$write = $true
 	}
 

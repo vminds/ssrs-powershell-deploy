@@ -9,7 +9,7 @@ function New-SSRSFolder (
   $script:ErrorActionPreference = 'Stop'
 
 	if (!$recursing) {
-		Write-Verbose "Creating SSRS folder '$Name'"
+		Write-InformationLog -Message "Creating SSRS folder '$Name'"
 	}
 
 	$Name = Normalize-SSRSFolder -Folder $Name
@@ -29,7 +29,7 @@ function New-SSRSFolder (
 		$Proxy.CreateFolder($Leaf, $Parent, $null) > $null
 	} else {
 		if (!$recursing) {
-			Write-Verbose " - skipped, already exists"
+			Write-InformationLog -Message " - skipped, already exists"
 		}
 	}
 }
